@@ -15,6 +15,7 @@ public class FreeCamMovement : MonoBehaviour
     private void OnEnable()
     {
         action.Enable();
+        action = GetComponent<PlayerInput>().currentActionMap;
     }
     private void OnDisable()
     {
@@ -22,41 +23,37 @@ public class FreeCamMovement : MonoBehaviour
     }
     void Start()
     {
-        InputActionMap playerInput = GetComponent<PlayerInput>().currentActionMap;
-        action = playerInput;
 
     }
+    
 
     void Update()
     {
-         switch (action.actions.ToString())
-         {
-            case "Zoom":
-                Zoom(action.);
-                break;
-            case "Move Around":
-                MoveCamera(action.ReadValue<Vector2>());
-                break;
-            case "Rotate":
-                RotateCamera(action.ReadValue<KeyCode>());
-                break;
-            }
-        }
-    private void Zoom(int value)
+
+    }
+
+    private void OnZoom(InputValue value)
     {
         Camera cam = GetComponent<Camera>();
-        cam.fieldOfView = value * zoomSpeed * Time.deltaTime;
+        var v = value.Get<float>();
+        cam.fieldOfView = v * zoomSpeed * Time.deltaTime;
     }
 
-    private void MoveCamera(Vector2 value)
+    private void OnCamMove(InputValue value)
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.MovePosition(new Vector3(value.x, value.y, 0) * CamMoveSpeed * Time.deltaTime);
+        var v = value.Get<Vector2>();
+        rb.MovePosition(new Vector3(v.x, v.y, 0) * CamMoveSpeed * Time.deltaTime);
     }
 
-    private void RotateCamera(KeyCode value)
+    private void OnRotate(InputValue value)
     {
-        switch (value)
+        var v = value.Get<KeyCode>();
+
+
+
+
+        switch (v)
         {
             case KeyCode.Q:
                 transform.Rotate(Vector3.up, -RotationSpeed * Time.deltaTime);
@@ -69,5 +66,6 @@ public class FreeCamMovement : MonoBehaviour
                 transform.Rotate(Vector3.up, mousepos.y * Time.deltaTime);
                 break;
         }
-    }   
+    }
+
 }
