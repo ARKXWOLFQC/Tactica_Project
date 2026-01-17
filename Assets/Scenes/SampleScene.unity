@@ -303,8 +303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f22c7cb31c6e144aa5df5ea7f7dfd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FreeCamMovement
-  zoomSpeed: 10
-  RotationSpeed: 10
+  zoomSpeed: 1
+  RotationSpeed: 25
   CamMoveSpeed: 10
 --- !u!114 &330585549
 MonoBehaviour:
