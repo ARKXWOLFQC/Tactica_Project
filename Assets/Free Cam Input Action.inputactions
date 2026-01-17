@@ -28,7 +28,11 @@
                     "name": "Rotate",
                     "type": "Value",
                     "id": "0b71ce68-8ef2-4353-a608-44425f8a4f01",
+<<<<<<< HEAD
                     "expectedControlType": "Axis",
+=======
+                    "expectedControlType": "",
+>>>>>>> d85daeefdd5d5224e6d2e3c414d6e2aca54844d3
                     "processors": "",
                     "interactions": "Hold",
                     "initialStateCheck": true
@@ -91,9 +95,15 @@
                     "isPartOfComposite": true
                 },
                 {
+<<<<<<< HEAD
                     "name": "1D Axis",
                     "id": "3045f7bf-8371-4d15-bd8a-16c813ccc095",
                     "path": "1DAxis",
+=======
+                    "name": "2D Vector",
+                    "id": "98e5d5a4-e89c-4bf4-a1a9-4a9bbe080b38",
+                    "path": "2DVector",
+>>>>>>> d85daeefdd5d5224e6d2e3c414d6e2aca54844d3
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -102,8 +112,13 @@
                     "isPartOfComposite": false
                 },
                 {
+<<<<<<< HEAD
                     "name": "Negative",
                     "id": "3265a849-6413-449f-bdf5-c0c7365b0e4d",
+=======
+                    "name": "Up",
+                    "id": "332e974f-ec6f-4e37-9b30-59ec267b1513",
+>>>>>>> d85daeefdd5d5224e6d2e3c414d6e2aca54844d3
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
@@ -113,8 +128,13 @@
                     "isPartOfComposite": true
                 },
                 {
+<<<<<<< HEAD
                     "name": "Positive",
                     "id": "bf8c777b-e3bc-493d-aed0-922c354292ea",
+=======
+                    "name": "Down",
+                    "id": "39bc944d-40bf-47eb-b111-3c6164828d07",
+>>>>>>> d85daeefdd5d5224e6d2e3c414d6e2aca54844d3
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
@@ -122,6 +142,31 @@
                     "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
+<<<<<<< HEAD
+=======
+                },
+                {
+                    "name": "Left",
+                    "id": "6fd1dc33-ffa8-45eb-b769-468c07f9bb51",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "8f4c9a2c-bd5c-4eb3-9aec-e16baafe643d",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+>>>>>>> d85daeefdd5d5224e6d2e3c414d6e2aca54844d3
                 },
                 {
                     "name": "",
