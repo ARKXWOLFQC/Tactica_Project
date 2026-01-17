@@ -28,9 +28,9 @@
                     "name": "Rotate",
                     "type": "Value",
                     "id": "0b71ce68-8ef2-4353-a608-44425f8a4f01",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "initialStateCheck": true
                 }
             ],
@@ -91,37 +91,37 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "138afc39-a754-4369-b979-934b9b9a41f2",
+                    "name": "1D Axis",
+                    "id": "3045f7bf-8371-4d15-bd8a-16c813ccc095",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Negative",
+                    "id": "3265a849-6413-449f-bdf5-c0c7365b0e4d",
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Rotate",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "d7c9bed2-08cc-443d-a512-663ffe8e1741",
+                    "name": "Positive",
+                    "id": "bf8c777b-e3bc-493d-aed0-922c354292ea",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Rotate",
                     "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0588ed51-74a1-4f68-9df9-bdc3782b1060",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotate",
-                    "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",

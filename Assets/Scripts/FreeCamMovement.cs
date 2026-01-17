@@ -14,8 +14,9 @@ public class FreeCamMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        action.Enable();
         action = GetComponent<PlayerInput>().currentActionMap;
+        if (action != null) action.Disable();
+        action.Enable();
     }
     private void OnDisable()
     {
@@ -43,29 +44,14 @@ public class FreeCamMovement : MonoBehaviour
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         var v = value.Get<Vector2>();
-        rb.MovePosition(new Vector3(v.x, v.y, 0) * CamMoveSpeed * Time.deltaTime);
+        rb.MovePosition(new Vector3(v.x, 0, v.y) * CamMoveSpeed * Time.deltaTime);
     }
 
     private void OnRotate(InputValue value)
     {
-        var v = value.Get<KeyCode>();
+        var v = value.Get<float>();
 
-
-
-
-        switch (v)
-        {
-            case KeyCode.Q:
-                transform.Rotate(Vector3.up, -RotationSpeed * Time.deltaTime);
-                break;
-            case KeyCode.E:
-                transform.Rotate(Vector3.up, RotationSpeed * Time.deltaTime);
-                break;
-            case KeyCode.Mouse2:
-                Vector2 mousepos = Mouse.current.position.ReadValue();
-                transform.Rotate(Vector3.up, mousepos.y * Time.deltaTime);
-                break;
-        }
+        transform.Rotate(Vector3.up, v * -RotationSpeed, Time.deltaTime);
     }
 
 }
